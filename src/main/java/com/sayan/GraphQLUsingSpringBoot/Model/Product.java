@@ -14,5 +14,5 @@ public class Product {
     @Id
     private int id;
     private String name;
-    private String price;
+    private int price;
 }

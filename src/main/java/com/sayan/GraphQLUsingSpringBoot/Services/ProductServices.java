@@ -5,6 +5,8 @@ import com.sayan.GraphQLUsingSpringBoot.Repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductServices {
     @Autowired
@@ -28,5 +30,9 @@ public class ProductServices {
     public String delete(int id){
         productRepo.deleteById(id);
         return "deleted " + id;
+    }
+
+    public List<Product> allProduct(){
+        return productRepo.findAll();
     }
 }
